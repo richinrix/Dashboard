@@ -1,0 +1,92 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "dob": "01/01/1990",
+    "email": " ",
+    "password": " ",
+    "address": " ",
+    "city": " ",
+    "state": " ",
+    "phone": " ",
+    "TFA": false,
+    "totalRevenues": 242110,
+    "totalTransactions": 103120,
+    "totalLikes": 143200,
+    "totalUsers": 213,
+    "userRecords": [
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      },
+      {
+        "name": "John Doe",
+        "email": "j@mail ",
+        "gender": "Male",
+        "image": "",
+        "adminStat": false
+      }
+    ],
+    "activity": {
+      "user": {
+        "week1": 200,
+        "week2": 321,
+        "week3": 400,
+        "week4": 234,
+        "week5": 324
+      },
+      "guest": {
+        "week1": 200,
+        "week2": 321,
+        "week3": 400,
+        "week4": 234,
+        "week5": 324
+      }
+    }
+  }
+]

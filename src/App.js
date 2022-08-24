@@ -1,7 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import logo from "./logo.svg";
+import "./App.css";
+const url = "https://dummydata-fqqi0aufx-richinrix.vercel.app/data.json";
+const clientID =
+  "178417619857-2dr5pf2vgpgq31c05s4rqp880761f024.apps.googleusercontent.com";
+const clientSecret = "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";
+function App(props) {
+  const { user } = props;
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {user && user.name}
         </a>
       </header>
     </div>

@@ -1,0 +1,12 @@
+export { default as dashboardIcon } from "./dashboard_icon.png";
+export { default as settingsIcon } from "./setting_icon.png";
+export { default as scheduleIcon } from "./schedule_icon.png";
+export { default as transactionIcon } from "./transaction_icon.png";
+export { default as userIcon } from "./user_icon.png";
+export { default as bellIcon } from "./bell.png";
+export { default as revenueIcon } from "./revenue.png";
+export { default as usersIcon } from "./users.png";
+export { default as likesIcon } from "./likes.png";
+export { default as transactionIcon2 } from "./transaction2.png";
+export { default as leftIcon } from "./left.png";
+export { default as rightIcon } from "./right.png";
