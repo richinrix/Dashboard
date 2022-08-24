@@ -156,6 +156,10 @@ const Login = () => {
           Register here
         </span>
       </div>
+      <div class="text-sm text-gray-500">
+        Use tonnystark@gmail.com / oliverqueen@gmail.com and any password to
+        login
+      </div>
     </div>
   );
   const signUp = () => (
