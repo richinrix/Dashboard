@@ -46,22 +46,22 @@ const PieChart = () => {
   return (
     <div className="  my-2 w-full">
       {/* */}
-      <div class="grid grid-cols-2 gap-4 my-5">
-        <div class="bg-white rounded-xl p-8 flex flex-col ">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
+        <div class="bg-white rounded-xl p-3 md:p-8 flex flex-col ">
           <div class="flex justify-between">
-            <div class="text-xl font-bold">Top Products</div>
+            <div class="text-xl font-bold font-montserrat">Top Products</div>
             <div class="text-gray-500 text-sm flex items-center">
               <div>May-June 2021 </div>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-3 mt-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
             <div class="w-full h-full  flex justify-center items-center">
               <CanvasJSChart options={options} />
             </div>
-            <div class="flex flex-col h-full  justify-center pl-10 ">
+            <div class="grid grid-cols-2 md:flex md:justify-center  font-lato  md:flex-col h-full    md:pl-10 ">
               {data.map((item, index) => {
                 return (
-                  <div className="my-2">
+                  <div className="md:my-2 col-span-1">
                     <div class="flex items-center ">
                       <div
                         class="w-3 h-3 rounded-full"
@@ -78,14 +78,16 @@ const PieChart = () => {
             </div>
           </div>
         </div>
-        <div class="bg-white rounded-xl p-8">
+        <div class="bg-white rounded-xl p-3 md:p-8">
           <div class=" flex justify-between items-center">
-            <span class="text-xl font-bold">Today's Schedule</span>
+            <span class="text-xl font-bold  font-montserrat">
+              Today's Schedule
+            </span>
             <span class="text-gray-500 text-xs cursor-pointer">
               See All {">"}
             </span>
           </div>
-          <div class="flex items-center h-auto w-full my-4">
+          <div class="flex items-center h-auto w-full my-4 font-lato">
             <div class="h-16 mr-3 w-2 bg-green-300"></div>
             <div class="flex flex-col h-auto">
               <div class="text-sm font-semibold">Meeting with client</div>

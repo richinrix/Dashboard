@@ -1,3 +1,16 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;700&display=swap');
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+.font-montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
 .canvasjs-chart-credit{
     display: none !important;
 }

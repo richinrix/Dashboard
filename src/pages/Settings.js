@@ -8,16 +8,16 @@ const Settings = () => {
   );
 
   return (
-    <div className="min-h-screen w-full flex p-6 bg-brand-bgGray ">
+    <div className="min-h-screen w-full flex flex-col md:flex-row p-3 md:p-6 bg-brand-bgGray font-lato ">
       <Nav activeSection="Dashboard" />
-      <div class="w-full h-full p-8">
+      <div class="w-full h-full p-3 md:p-8">
         <Title />
-        <div class="grid grid-cols-5 gap-6 my-2">
-          <div class="bg-white rounded-xl p-4 col-span-3  flex flex-col ">
-            <div className="text-2xl font-bold">Profile</div>
-
-            <div class="w-full flex">
-              <div class="w-2/6 flex justify-center flex-col items-center">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 my-2">
+          {/* profile info */}
+          <div class="bg-white rounded-xl p-4 col-span-2 md:col-span-3  flex flex-col ">
+            <div className="text-2xl font-bold font-montserrat">Profile</div>
+            <div class="w-full flex flex-col md:flex-row justify-center">
+              <div class="w-full md:w-2/6 flex justify-center flex-col items-center">
                 <div
                   class="w-32 h-32 bg-cover bg-center bg-no-repeat rounded-full my-3 bg-red-300"
                   style={{
@@ -29,7 +29,7 @@ const Settings = () => {
                   Change
                 </div>
               </div>
-              <div class=" w-4/6 grid grid-cols-2 gap-4">
+              <div class=" w-full md:w-4/6 mt-3 md:mt-0 grid grid-cols-2 gap-4">
                 <div class="col-span-1">
                   <div class="text-sm">First Name</div>
                   <input
@@ -113,9 +113,10 @@ const Settings = () => {
               </div>
             </div>
           </div>
-          <div class="   col-span-2  flex flex-col ">
+          {/* account section */}
+          <div class="   col-span-2 md:col-span-2  flex flex-col ">
             <div class="bg-white rounded-xl w-full p-4 flex flex-col">
-              <span class="font-bold text-2xl">Account</span>
+              <span class="font-bold text-2xl font-montserrat">Account</span>
               <div className="my-3">
                 Email
                 <input
@@ -157,11 +158,13 @@ const Settings = () => {
               </div>
             </div>
             <div class="bg-white rounded-xl my-4 w-full p-4 flex flex-col">
-              <span class="font-bold">Secuirty</span>
+              <span class="font-bold font-montserrat">Secuirty</span>
               <div>2-Step Verification</div>
             </div>
             <div class="bg-white rounded-xl my-4 w-full p-4 flex flex-col">
-              <span class="font-bold text-red-800 my-1">Danger Zone</span>
+              <span class="font-bold text-red-800 my-1 font-montserrat">
+                Danger Zone
+              </span>
               <div class="py-2 w-full text-center text-red-800 border-2 rounded-xl border-red-800">
                 Delete My Account
               </div>

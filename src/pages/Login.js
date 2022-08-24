@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
-import { stringify } from "postcss";
 const Login = () => {
-  // localStorage.setItem("signedInStat", false);
-  // sing in or sign up stat
   const [signInStat, setSignInStat] = useState(true);
   const [user, setUser] = useState({
     firstName: "",
@@ -41,24 +38,13 @@ const Login = () => {
         "178417619857-2dr5pf2vgpgq31c05s4rqp880761f024.apps.googleusercontent.com",
       callback: (response) => {
         const { credential, id_token } = response;
-
         const details = jwtDecode(credential);
         setUser({ ...user, email: details.email });
-
         localStorage.setItem("user", JSON.stringify(details));
-
         fetchData(details);
-
         localStorage.setItem("signedInStat", true);
-
         setSignedIn(true);
         console.log("first", details);
-
-        setTimeout(() => {
-          //   window.location.href = "/dashboard";
-        }, 1000);
-
-        // document.getElementById("signinDiv").hidden = true;
       },
     });
     google.accounts.id.renderButton(document.getElementById("my-signinDiv"), {
@@ -71,6 +57,7 @@ const Login = () => {
       fetch_basic_profile: true,
       prompt_parent_id: "my-signinDiv",
     });
+    // prompting sign in via google on load
     google.accounts.id.prompt();
   }, []);
 
@@ -89,14 +76,14 @@ const Login = () => {
       user.firstName !== "" &&
       user.lastName !== ""
     )
-      //   window.location.href = "/dashboard";
+      // signing up is not implemented cuz no db :)
       console.log("signing up");
   };
 
   const signIn = () => (
-    <>
+    <div className="col-span-4 md:col-span-4 mx-auto">
       <div class="w-full ">
-        <span className=" font-bold text-4xl">Sign In </span>
+        <span className=" font-bold text-4xl font-montserrat">Sign In </span>
         <br /> <span class="text-base">Sign in to your account</span>
       </div>
 
@@ -169,12 +156,12 @@ const Login = () => {
           Register here
         </span>
       </div>
-    </>
+    </div>
   );
   const signUp = () => (
-    <>
+    <div className="col-span-4 mx-auto">
       <div class="w-full ">
-        <span className=" font-bold text-4xl">Sign Up </span>
+        <span className=" font-bold text-4xl font-montserrat">Sign Up </span>
         <br /> <span class="text-base">Make your account</span>
       </div>
 
@@ -290,14 +277,14 @@ const Login = () => {
           Sign In
         </span>
       </div>
-    </>
+    </div>
   );
   return (
-    <div className="min-h-screen w-full flex ">
-      <div class="w-1/3 bg-brand-darkBlue  flex items-center justify-center text-7xl text-white font-bold tracking-wider">
+    <div className="min-h-screen w-full grid grid-cols-12 font-lato  ">
+      <div class="col-span-12 md:col-span-4 bg-brand-darkBlue  flex items-center justify-center text-7xl text-white font-bold tracking-wider py-5">
         Dash.
       </div>
-      <div class="w-2/3 bg-brand-bgGray  flex flex-col items-center justify-center md:px-64">
+      <div class="col-span-12 grid grid-cols-4  md:col-span-8 bg-brand-bgGray   items-center justify-center px-5 py-8 md:py-0  ">
         {signInStat ? signIn() : signUp()}
       </div>
     </div>

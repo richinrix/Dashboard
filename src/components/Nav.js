@@ -41,35 +41,47 @@ const Nav = ({ activeSection }) => {
       style={{
         borderRadius: "30px",
       }}
-      className="w-full relative md:w-1/5  bg-brand-darkBlue flex flex-col  py-14 pl-12"
+      className="w-full font-montserrat  relative md:w-1/5  bg-brand-darkBlue flex flex-col px-4 py-2 md:py-14 md:pl-12"
     >
-      <div class="text-3xl font-bold text-white mb-5">Dash.</div>
-      {sections.map((section) => {
-        return (
-          <a
-            href={section.link}
-            class="flex items-center cursor-pointer w-max  my-3"
-          >
-            <img
-              src={section.icon}
-              className="w-4 object-contain  mr-3"
-              alt=""
-            />
-            <div
-              className={`text-white    text-lg w-full  ${
-                path === section.link
-                  ? "text-white font-bold "
-                  : "text-gray-300"
-              }`}
+      <div class="text-xl md:text-3xl font-montserrat-bold font-bold text-white md:mb-5 hidden md:block">
+        Dash.
+      </div>
+      <div class="flex md:flex-col md:flex-nowrap flex-row justify-between">
+        {sections.map((section) => {
+          return (
+            <a
+              href={section.link}
+              class="flex flex-col md:flex-row justify-center  items-center cursor-pointer w-max md:mx-0 mx-4  my-3"
             >
-              {section.name}
-            </div>
-          </a>
-        );
-      })}
-      <div class="  absolute bottom-14  text-gray-200 flex flex-col">
-        <div className="mb-3">Help</div>
-        <div className="my-3">Contact Us</div>
+              <img
+                src={section.icon}
+                className="w-5 md:w-4 object-contain object-center  md:mr-3"
+                alt=""
+              />
+              <div
+                className={`text-white hidden md:block   text-lg w-full  ${
+                  path === section.link
+                    ? "text-white font-bold "
+                    : "text-gray-300"
+                }`}
+              >
+                {section.name}
+              </div>
+              <div
+                style={{
+                  height: "1px",
+                }}
+                class={`bg-white w-6 my-2 block md:hidden ${
+                  path == section.link ? "" : "opacity-0"
+                }`}
+              />
+            </a>
+          );
+        })}
+      </div>
+      <div class="  md:absolute bottom-14  text-gray-200 flex flex-row justify-between md:flex-col px-5 md:px-0">
+        <div className="  md:mb-3">Help</div>
+        <div className="  md:my-3">Contact Us</div>
         <div className="cursor-pointer" onClick={(e) => handleLogOut(e)}>
           Sign out
         </div>

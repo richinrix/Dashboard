@@ -5,15 +5,15 @@ const Title = () => {
   const { image } = JSON.parse(localStorage.getItem("userDetails"));
 
   return (
-    <div class="flex justify-between w-full">
-      <div class="text-2xl font-bold">
+    <div class="flex items-center justify-between w-full">
+      <div class="text-xl md:text-2xl font-bold font-montserrat">
         {path.slice(1)[0].toUpperCase() + path.slice(2)}
       </div>
       <div class="flex">
         <div class="bg-white flex px-3 py-1 rounded-xl ">
           <input
             type="text"
-            class="bg-white px-1 py-1 outline-none"
+            class="bg-white px-1 py-1 outline-none md:block hidden"
             placeholder="Search..."
           />
           <img

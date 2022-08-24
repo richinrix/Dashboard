@@ -19,7 +19,7 @@ const Graph = () => {
   const options = {
     animationEnabled: true,
     title: {
-      text: "Activities",
+      text: "",
     },
     axisY: {
       title: " ",
@@ -45,35 +45,36 @@ const Graph = () => {
   };
 
   return (
-    <div class="bg-white rounded-xl p-8">
-      <div className="text-2xl font-bold">Activites</div>
-      <div class="flex justify-between">
+    <div class="bg-white rounded-xl p-3 md:p-8">
+      <div className="text-2xl font-bold font-montserrat">Activites</div>
+      <div class="flex flex-col md:flex-row justify-between font-lato">
         <select
           onChange={(e) => setCurrentKey(e.target.value)}
-          class="text-gray-500 text-sm outline-none"
+          class="text-gray-500  bg-transparent w-max mb-3 md:my-0 text-sm outline-none"
         >
           {keys.map((key) => {
             return <option value={key}>{key}</option>;
           })}
         </select>
-        <div class="flex items-center">
-          <div className="flex items-center mx-5">
+        {/* legend */}
+        <div class="flex items-center justify-center my-1 md:my-0">
+          <div className="flex items-center  mx-3 md:mx-5">
             <div
               style={{
                 backgroundColor: "#c0504e",
               }}
               class="w-3 h-3  rounded-full mr-1"
             />
-            <div class=" text-sm">Users</div>
+            <div class=" text-sm">Guests</div>
           </div>
-          <div className="flex items-center mx-5">
+          <div className="flex items-center mx-3 md:mx-5">
             <div
               style={{
                 backgroundColor: "#4f81bc",
               }}
               class="w-3 h-3  rounded-full mr-1"
             />
-            <div class=" text-sm">Guests</div>
+            <div class=" text-sm">Users</div>
           </div>
         </div>
       </div>
