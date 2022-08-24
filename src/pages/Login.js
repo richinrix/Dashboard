@@ -157,7 +157,7 @@ const Login = () => {
         </span>
       </div>
       <div class="text-sm text-gray-500">
-        Use tonnystark@gmail.com / oliverqueen@gmail.com and any password to
+        Use tonystark@gmail.com / oliverqueen@gmail.com and any password to
         login
       </div>
     </div>
