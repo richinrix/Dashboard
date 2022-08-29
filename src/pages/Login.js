@@ -15,11 +15,12 @@ const Login = () => {
   const [signedIn, setSignedIn] = useState(false);
   const fetchData = (details) => {
     if (details) {
-      fetch("https://dummydata-bgco0wif2-richinrix.vercel.app/data.json")
+      fetch("https://dummydata-e7s1adxas-richinrix.vercel.app/data.json")
         .then((res) => res.json())
         .then((data) => {
+          // console.log({ data });
           const userFound = data.find((user) => user.email === details.email);
-          console.log(userFound);
+          // console.log(userFound);
           if (userFound) {
             localStorage.setItem("signedInStat", true);
             localStorage.setItem("userDetails", JSON.stringify(userFound));
@@ -36,7 +37,7 @@ const Login = () => {
     google.accounts.id.initialize({
       client_id:
         // "178417619857-2dr5pf2vgpgq31c05s4rqp880761f024.apps.googleusercontent.com",
-        "178417619857-pqc32bjer2gde9l91297c5j8fl0dhlpk.apps.googleusercontent.com",
+        "178417619857-b06etgv42ptoclca2vls2p8h116p6jic.apps.googleusercontent.com",
       callback: (response) => {
         const { credential, id_token } = response;
         const details = jwtDecode(credential);
@@ -64,7 +65,6 @@ const Login = () => {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    console.log({ user });
     if (user.email !== "" && user.password !== "") fetchData(user);
   };
   const handleSignUp = (e) => {

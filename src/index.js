@@ -5,14 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
 import { Login, Dashboard, Users, Settings } from "./pages/";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// const [user, setUser] = useState({});
 root.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
