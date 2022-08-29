@@ -37,7 +37,8 @@ const Login = () => {
     google.accounts.id.initialize({
       client_id:
         // "178417619857-2dr5pf2vgpgq31c05s4rqp880761f024.apps.googleusercontent.com",
-        "178417619857-b06etgv42ptoclca2vls2p8h116p6jic.apps.googleusercontent.com",
+        // "178417619857-b06etgv42ptoclca2vls2p8h116p6jic.apps.googleusercontent.com",
+        "178417619857-jg3s4a5nrs05hggk4hutb69vdoj2rd99.apps.googleusercontent.com",
       callback: (response) => {
         const { credential, id_token } = response;
         const details = jwtDecode(credential);
